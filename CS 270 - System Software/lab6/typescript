@@ -1,0 +1,32 @@
+Script started on Mon 10 Oct 2011 11:39:06 PM PDT
+[?1034hbash-4.1$ ./a.out
+Please enter a string to analyze. Enter q to quit. ls ls -l -b
+There are 4 tokens.
+The tokens are:
+ls
+ls
+-l
+-b
+Please enter a string to analyze. Enter q to quit. hahah haha h lol
+There are 3 tokens.
+The tokens are:
+hahah
+haha
+lol
+Please enter a string to analyze. Enter q to quit. hi mr steinte  er
+There are 3 tokens.
+The tokens are:
+hi
+mr
+steiner
+Please enter a string to analyze. Enter q to quit. locate
+There are 1 tokens.
+The tokens are:
+locate
+Please enter a string to analyze. Enter q to quit. q
+bash-4.1$ quit
+bash: quit: command not found
+bash-4.1$ exit
+exit
+
+Script done on Mon 10 Oct 2011 11:39:32 PM PDT

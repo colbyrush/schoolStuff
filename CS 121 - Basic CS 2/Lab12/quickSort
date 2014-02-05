@@ -1,0 +1,73 @@
+Script started on Thu 21 Apr 2011 01:30:43 PM PDT
+bash-3.2$ g++ quickSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted10.dat
+Statistics:
+Quicksort: 13
+Pivots: 6
+Swaps: 30
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedlh10.dat
+Statistics:
+Quicksort: 19
+Pivots: 9
+Swaps: 9
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl10.dat
+Statistics:
+Quicksort: 19
+Pivots: 9
+Swaps: 34
+bash-3.2$ g++ quickSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted1000.dat
+Statistics:
+Quicksort: 1353
+Pivots: 676
+Swaps: 6025
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sorted1000    lh1000.dat
+Statistics:
+Quicksort: 1997
+Pivots: 998
+Swaps: 999
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl1000.dat
+Statistics:
+Quicksort: 1999
+Pivots: 999
+Swaps: 250999
+bash-3.2$ g++ quickSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted10000.dat
+Statistics:
+Quicksort: 13361
+Pivots: 6680
+Swaps: 82702
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedlh10000.dat
+Statistics:
+Quicksort: 19957
+Pivots: 9978
+Swaps: 9999
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl10000.dat
+Statistics:
+Quicksort: 19971
+Pivots: 9985
+Swaps: 24980255
+bash-3.2$ emacs     exit    quit
+bash: quit: command not found
+bash-3.2$ exit
+exit
+
+Script done on Thu 21 Apr 2011 01:33:53 PM PDT

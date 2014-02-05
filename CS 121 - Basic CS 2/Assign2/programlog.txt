@@ -1,0 +1,9 @@
+Programming Log:
+
+Wednesday:
+From 11:20 AM - 2:00 PM.
+
+Thursday:
+From 12:30 PM - 3:30 PM, break for misc things, then 7:30 PM - 12:00 AM.
+
+About ~9 hours to make. Two of them was just debugging, with copious help from TAs at CSAC. Lots of staring at the screen, trying to get my head around all of the functions and how to implement the neighbor check. The passing gave me a lot of headaches too, since for some reason it refused to pass my arrays. My code is also bits and pieces of help from other students, so I was really hoping my cobbling worked out. Even though I can't find /fix the segmentation faults, I still feel like I learned a fair amount of how to assign dynamic arrays, although it was enough of a headache i'm going to try to avoid them if I can. Also practiced my passing skills, which admitably are rusty. All in all a difficult program, I just sort of wish we could have reviewed code in class that would have been useful for a program of this type so maybe I could have found and fixed the seg faults.

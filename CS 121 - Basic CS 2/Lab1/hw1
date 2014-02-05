@@ -1,0 +1,11 @@
+Colby Rush, CS 121-02, Lab #1, 1/20/2011
+
+Returns the words 'Hello, world.'
+
+Script started on Thu 20 Jan 2011 12:47:31 PM PST
+bash-3.2$ ./a.out
+Hello, world.
+bash-3.2$ exit
+exit
+
+Script done on Thu 20 Jan 2011 12:47:43 PM PST

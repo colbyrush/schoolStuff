@@ -1,0 +1,13 @@
+Script started on Thu 27 Jan 2011 02:41:40 PM PST
+bash-3.2$ exit./a.out 2 + 2
+2 + 2 = 4
+bash-3.2$ ./a.out 2 + 2[1P[1@- 2 4
+2 - 4 = -2
+bash-3.2$ ./a.out 2 - 4[1P[1@/
+2 / 4 = 0.5
+bash-3.2$ ./a.out 2 / 4[1P[1@*
+2 a.out #program1.cpp# = 2.07358e-317
+bash-3.2$ exit
+exit
+
+Script done on Thu 27 Jan 2011 02:41:59 PM PST

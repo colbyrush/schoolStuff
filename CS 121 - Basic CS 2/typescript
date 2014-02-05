@@ -1,0 +1,14 @@
+Script started on Thu 05 May 2011 12:07:18 PM PDT
+bash-3.2$ ./a.out
+                                            __ 
+ _____     _ _                        _   _|  |
+|  |  |___| | |___      _ _ _ ___ ___| |_| |  |
+|     | -_| | | . |_   | | | | . |  _| | . |__|
+|__|__|___|_|_|___| |  |_____|___|_| |_|___|__|
+                  |_|                          
+bash-3.2$ lol
+bash: lol: command not found
+bash-3.2$ exit
+exit
+
+Script done on Thu 05 May 2011 12:07:25 PM PDT

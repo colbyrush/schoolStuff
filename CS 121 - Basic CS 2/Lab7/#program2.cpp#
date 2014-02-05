@@ -1,0 +1,13 @@
+/* Colby Rush   CS 121-02
+   Lab 7        3/10/2011 */
+
+#include <iostream
+
+using namespace std;
+
+struct node
+{
+  int info;
+  struct node *next
+};
+

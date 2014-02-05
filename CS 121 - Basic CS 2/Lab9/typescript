@@ -1,0 +1,13 @@
+Script started on Thu 31 Mar 2011 01:47:04 PM PDT
+bash-3.2$ g++ -I. -c array.cpp
+abash-3.2$ ar -ru libarray.a arrau y.o
+bash-3.2$ ranlib libarray.a
+bash-3.2$ g++ testar  Array.cpp -L. -larray
+bash-3.2$ ./a.out
+Max value of array is: 79
+Median value of array is: 31
+Standard deviation of array is: 29.885
+bash-3.2$ exit
+exit
+
+Script done on Thu 31 Mar 2011 01:47:51 PM PDT

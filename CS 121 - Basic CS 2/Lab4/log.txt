@@ -1,0 +1,4 @@
+File modification resulted in none of the files being compiled and numerous errors telling me there were undefined references to a bunch of functions. Panic sets in before a fellow lab student points out what's wrong with the file.
+
+
+Cleaning the directory removed all of the object files made by compiling testStack.

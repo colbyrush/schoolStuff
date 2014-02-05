@@ -1,0 +1,323 @@
+alias lls='ls -al'
+lls
+alias lls='ls -l'
+unalias lls
+lls
+clear
+exit
+alias lls='ls -al'
+alias lls='ls -al'
+alias lls='ls -al'
+alias lls='ls -al'
+alias lls='ls -al'
+alias lls=ls -al
+ls
+ls
+ls
+ls
+ls -l
+ls
+ls
+ls
+exit
+ls
+exit
+ls
+ls -l
+alias
+alias ls=ls -l
+ls
+unalias ls
+ls
+unalias ls
+exit
+alias ls='ls -l'
+ls
+unalias ls
+ls
+exit
+alias ls='ls -l'
+exit
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+alias ls='ls -l'
+alias ls='ls -l'
+ls
+alias
+ls
+ls -l
+alias ='ls -l'
+ 
+alias ls='ls -l'
+ls
+alias
+alias ls='ls -l'
+ls
+alias
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+ls
+alias
+alias ls='ls -l'
+ls
+alias
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+alias
+exit
+alias ls='ls -l'
+ls
+alias
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+alias
+alias ls='ls -l'
+ls
+alias
+alias ls='ls -l'
+ls
+alias
+alias ls='ls -l'
+ls
+unalias ls
+ls
+unalias ls
+exit
+alias ls='ls -l'
+ls
+alias
+ls
+alias ls='ls -l'
+ls
+alias
+exit
+alias ls='ls -l'
+ls
+alias
+alias q='ls'
+q
+ls
+alias
+exit
+ls
+alias ls='ls -l'
+ls
+alias
+alias
+alias z='ls'
+alias
+exit
+alias ls='ls -l'
+ls
+alias
+unalias ls
+alias
+exit
+ls
+alias ls='ls -l'
+ls
+alias
+unalias ls
+unalias ls
+alias
+exit
+alias ls='ls -l'
+alias
+exit
+echo $PATH
+PATH=$PATH:/.
+exit
+PATH=$PATH: /.
+exit
+history
+ls
+history
+!!
+!!
+ls
+ls
+history
+!!
+ls
+!!
+!!
+ls
+history
+ls
+!!
+history
+!!
+exit
+exit
+history
+exit
+history
+!!
+exit
+history
+!!
+exit
+ls
+history
+!!
+ls
+history
+ls
+!!
+history
+ls
+ls
+history
+!!
+history
+exit
+history
+exit
+history
+ls
+!!
+ls
+alias ls='ls -l'
+ls
+exit
+ls
+ls
+ls
+ls
+ls
+ls
+alias ls='ls -l'
+ls
+alias
+unalias ls
+ls
+ls | more
+ls | wc
+ls|wc
+ls | wc
+exit
+ls | wc
+wc
+ls
+ls -l
+ls | wc
+exit
+ls | wc
+exit
+ls -l | less
+exit
+ls | wc
+ls -l | less
+ls -al | less
+ls -al
+exit
+ls | wc
+exit
+exit
+ls | wc
+exit
+ls | wc
+exit
+ls | wc
+exit
+ls | wc
+exit
+ls | wc
+ls | wc
+print
+exit
+exit
+ls | wc
+exit
+exit
+ls | wc
+|
+exit
+ls | wc
+exit
+ls | wc
+exit
+ls | wc
+ls
+exit
+ls | wc
+exit
+ls
+ls -l
+exit
+ls
+exit
+ls | wc
+exit
+ls -l
+ls
+exit
+ls -l
+ls
+ls -l
+ls -l
+exit
+ls | wc
+exit
+ls | wc
+ls | wc
+ls
+ls -l
+ls | wc
+ls | wc
+ls
+ls | wc
+run
+ls | wc
+ls
+ls -l
+ls | wc
+ls | wc
+exit
+ls | wc
+exit
+echo $PATH
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+echo $PATH
+exit
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+exit
+ls
+PATH=$PATH:/.
+exit
+ls
+ls -l
+echo $PATH
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+exit
+PATH=$PATH:/.
+echo $PATH
+PATH=$PATH:/.
+echo $PATH
+exit
+PATH=$PATH:/.
+exit

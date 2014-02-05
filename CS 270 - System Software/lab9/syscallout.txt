@@ -1,0 +1,50 @@
+// This is where the computer actually executes the program
+execve("./a.out", ["./a.out"], [/* 29 vars */]) = 0
+
+// This is where I think the computer accesses the memory the file is stored at
+brk(0)                                  = 0x601000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f808a2c5000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+
+// It starts to read the file, I think mmap is is 'mapping out' exactly what the program is doing, and storing memory where it needs to be stored.
+fstat(3, {st_mode=S_IFREG|0644, st_size=50102, ...}) = 0
+mmap(NULL, 50102, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f808a2b8000
+close(3)                                = 0
+open("/lib64/libc.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\355\301P;\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1904456, ...}) = 0
+mmap(0x3b50c00000, 3729576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x3b50c00000
+mprotect(0x3b50d86000, 2093056, PROT_NONE) = 0
+mmap(0x3b50f85000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x185000) = 0x3b50f85000
+mmap(0x3b50f8a000, 18600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x3b50f8a000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f808a2b7000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f808a2b6000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f808a2b5000
+arch_prctl(ARCH_SET_FS, 0x7f808a2b6700) = 0
+mprotect(0x3b50f85000, 16384, PROT_READ) = 0
+mprotect(0x3b50a1f000, 4096, PROT_READ) = 0
+munmap(0x7f808a2b8000, 50102)           = 0
+brk(0)                                  = 0x601000
+brk(0x622000)                           = 0x622000
+
+//This is where it accesses the file linked in the fp and reads from it for the actual executable.
+open("test.txt", O_RDONLY)              = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=72, ...}) = 0
+mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f808a2c1000
+read(3, "Now\nis the time\nfor all good\nmen"..., 16384) = 72
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 4), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f808a2c0000
+
+//This is where it actually outputs the needed text to the screen, which is the point of the file.
+write(1, "Now\n", 4)                    = 4
+write(1, "is the time\n", 12)           = 12
+write(1, "for all good\n", 13)          = 13
+write(1, "men to come\n", 12)           = 12
+write(1, "to the aid of their\n", 20)   = 20
+write(1, "university\n", 11)            = 11
+read(3, "", 16384)                      = 0
+close(3)                                = 0
+munmap(0x7f808a2c1000, 16384)           = 0
+exit_group(0)                           = ?

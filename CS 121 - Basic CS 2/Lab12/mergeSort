@@ -1,0 +1,71 @@
+Script started on Thu 21 Apr 2011 01:34:59 PM PDT
+bash-3.2$ g++ mergeSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted10.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 19
+Merge #: 9
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+u sorted10  lh10.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 19
+Merge #: 9
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl10.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 19
+Merge #: 9
+bash-3.2$ g++ mergeSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted1000.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 1999
+Merge #: 999
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedlh1000.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 1999
+Merge #: 999
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl10000 .dat
+Statistics: 
+Swap #: 0
+Mergesort #: 1999
+Merge #: 999
+bash-3.2$ g++ mergeSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted10000.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 19999
+Merge #: 9999
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedlh10000.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 19999
+Merge #: 9999
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl10000.dat
+Statistics: 
+Swap #: 0
+Mergesort #: 19999
+Merge #: 9999
+bash-3.2$ exit
+exit
+
+Script done on Thu 21 Apr 2011 01:37:00 PM PDT

@@ -1,0 +1,66 @@
+Script started on Thu 21 Apr 2011 01:25:28 PM PDT
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted10.dat
+Statistics:
+Selection: 1
+Index(i?): 10
+bash-3.2$ emacs selSort.cpp
+bash-3.2$ g++ selSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted1000.dat
+Statistics:
+Selection: 1
+Index(i?): 1000
+bash-3.2$ emacs S selSort.cpp
+bash-3.2$ g++ selSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+usorted10000.dat
+Statistics:
+Selection: 1
+Index(i?): 10000
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl10000.dat
+Statistics:
+Selection: 1
+Index(i?): 10000
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedlh10000.dat
+Statistics:
+Selection: 1
+Index(i?): 10000
+bash-3.2$ emacs selSort.cpp
+bash-3.2$ g++ selSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl1000.dat
+Statistics:
+Selection: 1
+Index(i?): 1000
+bash-3.2$ ./al.  .out
+Enter a filename to sort: 
+sortedlh1000.dat
+Statistics:
+Selection: 1
+Index(i?): 1000
+bash-3.2$ emacs selSort.cppbash-3.2$ g++ selSort.cpp
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedlh10.dat
+Statistics:
+Selection: 1
+Index(i?): 10
+bash-3.2$ ./a.out
+Enter a filename to sort: 
+sortedhl10.dat
+Statistics:
+Selection: 1
+Index(i?): 10
+bash-3.2$ exit
+exit
+
+Script done on Thu 21 Apr 2011 01:29:16 PM PDT

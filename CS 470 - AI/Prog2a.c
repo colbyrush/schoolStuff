@@ -1,0 +1,326 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+void printboard(char board[10][10]);
+void play(char board[10][10], char P);
+int basicScore(char board[10][10]);
+int checkWin(char board[10][10], char P);
+int alphabeta(char board[10][10], char player, int alpha, int beta, int depth);
+int detMove(char board[10][10]);
+
+int maxDepth = 1;
+
+int main(int argc, char **argv)
+{
+
+  printf("Connect Four!");
+
+  int row;
+  int col;
+  char board[10][10];
+  char P[1];
+
+  for (row = 0; row < 6; row++)
+    for (col = 0; col < 7; col++)
+      board[row][col] = ' ';
+  
+  printboard(board);
+  printf("\nDo you want to be first or second? (1/2): ");
+  scanf ("%c", P);
+  if (P[0] == '1')
+    play(board, '1');
+  else
+    play(board, '2');
+}
+
+void printboard(char board[10][10])
+{
+  int row;
+  int col;
+  printf("\nCurrent Board:\n");
+  for (row = 0; row < 6; row++)
+    {
+      for (col = 0; col < 7; col++)
+        {
+          if (board[row][col] == ' ')
+            printf ("[   ]");
+          else if (board[row][col] == 'H')
+            printf ("[ H ]");
+          else if (board[row][col] == 'C')
+            printf ("[ C ]");
+        }
+      printf("\n");
+    }
+  printf("  0    1    2    3    4    5    6\n");
+}
+
+
+void play(char board[10][10], char P)
+{
+  char input[0];
+  int row;
+  int deep;
+  int col;
+  int choice = 0;
+  int game = 1;
+  int winner; 
+  int invalid = 10000;
+
+  if (P == '1')
+    while (game == 1)
+      {
+
+        printf("Human, choose a column, or type quit: ");
+        scanf ("%s", input);
+        
+        if (strcmp ("quit", input) == 0)
+          {
+            printf("Game over! Computer wins! \n");
+            exit (EXIT_FAILURE);
+          }
+        
+        choice = atoi(input);
+        
+        for (row = 0; row < 6; row++)
+          if (board[row][choice] == ' ')
+            deep = row;
+
+        while (board[0][choice] != ' ')
+          {  
+            printf("\nIllegal move. Please choose another: ");             
+            scanf ("%s", input);
+            choice = atoi(input);
+          }
+        
+        board[deep][choice] = 'H';        
+
+        if ((winner = checkWin(board, 'H')) == 1)
+          {
+            printboard(board);
+            printf ("Game over! Human wins! \n");
+            exit (EXIT_FAILURE);
+          }
+        
+        printf("Computer choosing move...");          
+        choice = detMove(board); 
+        for (row = 0; row < 6; row++)
+          if (board[row][choice] == ' ')
+            deep = row;
+        board[deep][choice] = 'C';
+        
+        printboard(board);
+        if ((winner = checkWin(board, 'C')) == 1)
+          {
+            printf ("Game over! Computer wins! \n", P);
+            exit (EXIT_FAILURE);
+          }
+      }
+  else
+    {
+      while (game == 1)
+        {
+            
+          printf("Computer choosing move...");          
+          choice = detMove(board);
+          for (row = 0; row < 6; row++)
+            if (board[row][choice] == ' ')
+              deep = row;
+          board[deep][choice] = 'C';
+          
+          printboard(board);
+          if ((winner = checkWin(board, 'C')) == 1)
+            {
+              printf ("Game over! Computer wins! \n");
+              exit (EXIT_FAILURE);
+            }
+          
+          printf("Human, choose a column, or type quit: ");
+          scanf ("%s", input);
+          
+          if (strcmp ("quit", input) == 0)
+            {
+              printf("Game over! Computer wins! \n");
+              exit (EXIT_FAILURE);
+            }
+          
+          choice = atoi(input);
+          for (row = 0; row < 6; row++)
+            if (board[row][choice] == ' ')
+              deep = row;
+          
+          while (board[0][choice] != ' ')
+          {  
+            printf("\nIllegal move. Please choose another: ");             
+            scanf ("%s", input);
+            choice = atoi(input);
+          }
+         
+          board[deep][choice] = 'H';
+          if ((winner = checkWin(board, 'H')) == 1)
+            {
+              printboard(board);
+              printf ("Game over! Human wins! \n");
+              exit (EXIT_FAILURE);
+            }
+        }
+    } 
+}
+
+int detMove(char board[10][10])
+{
+  int row = 0;
+  int col = 0;
+  int invalid = 10000;
+  int maxScore = -invalid;
+  int maxMove = 0;
+  int score = 0;
+  int deep;
+
+  for (col = 0; col < 7; col++)
+    {
+      for (row = 0; row < 6; row++)
+        if (board[row][col] == ' ')
+          deep = row;
+      board[deep][col] = 'C';
+      score = alphabeta(board,'H', -invalid, invalid, 0);
+      
+      if (score>=maxScore)
+        {
+          maxScore = score;
+          maxMove = col;
+        }
+      board[deep][col] = ' ';
+    }
+  return maxMove;
+}
+
+
+int alphabeta(char board[10][10], char player, int alpha, int beta, int depth)
+{
+  int invalid = 10000;
+  int row = 0;
+  int col = 0;
+  int winner = 0;
+  alpha = -invalid;
+  beta = invalid;
+  int deep;
+
+  if ((winner = checkWin(board, 'C')) == 1)
+    return invalid;
+  else if ((winner = checkWin(board, 'H')) == 1)
+    return -invalid;
+  if (depth>= maxDepth)
+    {
+      return basicScore(board);      
+      board[deep][col] = ' ';
+    }
+
+  if (player == 'C')
+    {
+      //max
+      for (col = 0; col < 7; col++)
+        {
+          for (row = 0; row < 6; row++)
+            if (board[row][col] == ' ')
+              deep = row;
+          board[deep][col] = 'C';
+          int score = alphabeta(board,'H',alpha,beta,depth+1) - depth;
+          board[deep][col] = ' ';
+          if (score > alpha) 
+            alpha = score;
+          if (alpha >= beta) 
+            return alpha;              
+        }
+      return alpha;
+    }
+
+  
+  else if (player == 'H')
+    {
+      //min
+      for (col = 0; col < 7; col++)
+        {     
+          for (row = 0; row < 6; row++)
+            if (board[row][col] == ' ')
+              deep = row;
+          
+          board[deep][col] = 'H';
+          int score = alphabeta(board,'C',alpha, beta, depth+1) + depth;          
+          board[deep][col] = ' ';
+          
+          if (score < beta) 
+            beta = score;
+          if (alpha >= beta) 
+            return beta;                
+        }
+      return beta;
+    }
+}
+
+int basicScore(char board[10][10])
+{
+
+  int score = 0;
+  int col = 0;
+  int row = 0;
+
+  for (col = 0; col < 7; col++)
+    {
+      int colscore = (3 - col);
+      if (colscore < 0)
+        colscore = -colscore;
+      colscore = 3 - colscore;
+
+      for (row = 0; row < 6; row++)
+        {
+          int rowscore = (3 - row);
+          if (rowscore < 0)
+            rowscore = -rowscore;
+          rowscore = 3 - rowscore;
+          
+          if (board[row][col] == 'C')
+            score += colscore + rowscore;
+          else if (board[row][col] == 'H')
+            score -= colscore + rowscore;
+        }
+    }
+  return score;
+}
+
+
+int checkWin(char board[10][10], char P)
+{
+  int row = 0;
+  int col = 0;
+  
+  for (col = 0; col < 4; col++)      // diag
+    for (row = 0; row < 3; row++)
+      if ((board[row][col] == P &&
+           board[row+1][col+1] == P &&
+           board[row+2][col+2] == P &&
+           board[row+3][col+3] == P) 
+          ||
+          (board[row+3][col] == P &&
+           board[row+2][col+1] == P &&
+           board[row+1][col+2] == P &&
+           board[row][col+3] == P))
+        return 1;
+  
+  for (col = 0; col < 4; col++) // hori
+    for (row = 0; row < 6; row++)
+      if (board[row][col] == P &&
+          board[row][col+1] == P &&
+          board[row][col+2] == P &&
+          board[row][col+3] == P)
+        return 1;
+  
+  for (row = 0; row < 3; row++) // vert
+    for (col = 0; col < 7; col++)
+      if (board[row][col] == P &&
+          board[row+1][col] == P &&
+          board[row+2][col] == P &&
+          board[row+3][col] == P)
+        return 1;
+
+  return 0;
+}

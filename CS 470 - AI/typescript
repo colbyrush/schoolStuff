@@ -1,0 +1,117 @@
+Script started on Mon 04 Mar 2013 03:36:34 PM PST
+[?1034hbash-4.1$ ./a.out
+Connect Four!
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+  0    1    2    3    4    5    6
+
+Do you want to be first or second? (1/2): 2
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][ C ][   ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 3
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][ C ][   ][   ]
+[   ][   ][   ][ H ][ C ][   ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 2
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][ C ][   ][   ]
+[   ][   ][   ][   ][ C ][   ][   ]
+[   ][   ][ H ][ H ][ C ][   ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 4
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][ H ][   ][   ]
+[   ][   ][   ][   ][ C ][   ][   ]
+[   ][   ][   ][ C ][ C ][   ][   ]
+[   ][   ][ H ][ H ][ C ][   ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 1
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][ H ][   ][   ]
+[   ][   ][   ][   ][ C ][   ][   ]
+[   ][   ][   ][ C ][ C ][   ][   ]
+[ C ][ H ][ H ][ H ][ C ][   ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 2
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][ H ][   ][   ]
+[   ][   ][   ][ C ][ C ][   ][   ]
+[   ][   ][ H ][ C ][ C ][   ][   ]
+[ C ][ H ][ H ][ H ][ C ][   ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 5
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][ C ][ H ][   ][   ]
+[   ][   ][   ][ C ][ C ][   ][   ]
+[   ][   ][ H ][ C ][ C ][   ][   ]
+[ C ][ H ][ H ][ H ][ C ][ H ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 3
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][ H ][   ][   ][   ]
+[   ][   ][   ][ C ][ H ][   ][   ]
+[   ][   ][ C ][   ][ C ][   ][   ]
+[   ][   ][ H ][ C ][ C ][   ][   ]
+[ C ][ H ][ H ][ H ][ C ][ H ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 1
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][ H ][   ][   ][   ]
+[   ][   ][   ][ C ][ H ][   ][   ]
+[   ][   ][ C ][ C ][ C ][   ][   ]
+[   ][ H ][ H ][ C ][ C ][   ][   ]
+[ C ][ H ][ H ][ H ][ C ][ H ][   ]
+  0    1    2    3    4    5    6
+Human, choose a column, or type quit: 1
+Computer choosing move...
+Current Board:
+[   ][   ][   ][   ][   ][   ][   ]
+[   ][   ][   ][ H ][   ][   ][   ]
+[   ][ C ][   ][ C ][ H ][   ][   ]
+[   ][ H ][ C ][ C ][ C ][   ][   ]
+[   ][ H ][ H ][ C ][ C ][   ][   ]
+[ C ][ H ][ H ][ H ][ C ][ H ][   ]
+  0    1    2    3    4    5    6
+Game over! Computer wins! 
+bash-4.1$ exit
+exit
+
+Script done on Mon 04 Mar 2013 03:37:12 PM PST

@@ -1,0 +1,420 @@
+Script started on Fri 22 Apr 2011 02:06:55 AM PDT
+bash-3.2$ ls
+a.out	     BSTree2.h	    #movies.txt#  prog		typescript
+BSTree2.cpp  BSTree2.h.gch  movies.txt	  program1.cpp
+bash-3.2$ g++ program1.cpp
+bash-3.2$ ./a.out
+
+Patriot Games
+
+
+The Great Race
+
+2 Fast 2 Furious
+Paul Walker
+Tyrese Gibson
+Eva Mendes
+Cole Hauser
+Ludacris
+
+48 Hrs.
+
+A Beautiful Mind
+
+A Man Called Horse
+
+A Shot in the Dark
+
+A View to a Kill
+
+A Warm December
+
+Alien
+
+American Graffiti
+
+Apocalypse Now
+
+Austin Powers: International Man of Mystery
+
+Back to School
+
+Big
+
+Black Rain
+
+Blade Runner
+Harrison Ford
+Rutger Hauer
+Sean Young
+Edward James Olmos
+M. Emmet Walsh
+Daryl Hannah
+William Sanderson
+Brion James
+Joe Turkel
+Joanna Cassidy
+James Hong
+Morgan Paull
+Kevin Thompson
+John Edward Allen
+Hy Pyke
+
+Blazing Saddles
+
+Blue Thunder
+
+Bonnie and Clyde
+
+Brazil
+
+Breakfast at Tiffany's
+
+Breakheart Pass
+
+Bright Lights, Big City
+
+Bullitt
+
+Caddyshack
+
+Caddyshack II
+
+Casablanca
+
+Casino Royale
+
+Catch-22
+
+Charley Varrick
+
+Cinderella Liberty
+
+Conan the Barbarian
+
+Conan the Destroyer
+
+Coneheads
+
+Cool Hand Luke
+
+Corvette Summer
+
+Davy Crockett, King of the Wild Frontier
+
+Deathline
+
+Deliverance
+
+Dirty Harry
+
+Dogs of War
+
+Down and Out in Beverly Hills
+
+Downhill Racer
+
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb
+
+Easy Rider
+
+Eat My Dust!
+
+Ensign Pulver
+
+Fail-Safe
+
+Fangs
+
+Fast Times at Ridgemont High
+
+Ferris Bueller's Day Off
+
+Fools
+
+Forrest Gump
+
+Gladiator
+
+Good Morning, Vietnam
+
+Good Will Hunting
+
+Goodfellas
+
+Gran Torino
+
+Greased Lightning
+
+Guns of the Magnificent Seven
+
+I Love You, Alice B. Toklas!
+
+Invictus
+
+Jaws
+
+Kelly's Heroes
+
+Leon
+
+Lethal Weapon 4
+
+Little Fauss and Big Halsy
+
+Little Man Tate
+
+Logan's Run
+Michael York
+Richard Jordan
+Jenny Agutter
+Roscoe Lee Browne
+Farrah Fawcett
+Michael Anderson Jr.
+Peter Ustinov
+Randolph Roberts
+Lara Lindsay
+Gary Morgan
+Michelle Stacy
+Laura Hippe
+David Westberg
+Camilla Carr
+Greg Lewis
+
+Lonely Are the Brave
+
+MASH
+
+Magnum Force
+
+Marathon Man
+
+Mars Attacks!
+
+My Blue Heaven
+
+Nevada Smith
+
+Office Space
+
+On Any Sunday
+
+On Her Majesty's Secret Service
+
+One Flew Over the Cuckoo's Nest
+
+Paper Lion
+
+Papillon
+
+Patton
+
+Pork Chop Hill
+
+Remo Williams: The Adventure Begins
+
+Revenge of the Pink Panther
+
+SSSSSSS
+
+Sabrina
+
+Scavenger Hunt
+
+Sgt. Bilko
+
+Short Circuit
+
+Sidecar Racers
+
+Slaughterhouse-Five
+
+Sneakers
+
+Soylent Green
+
+Space Cowboys
+
+Spaceballs
+
+Spies Like Us
+
+Stalag 17
+
+Star Wars
+
+Star Wars: Episode V - The Empire Strikes Back
+
+Star Wars: Episode VI - Return of the Jedi
+
+Step Into Liquid
+
+Summertime Killer
+
+Super Fly T.N.T.
+
+Tank
+
+Terminator 2: Judgment Day
+
+Terminator 3: Rise of the Machines
+
+The April Fools
+
+The Beverly Hillbillies
+
+The Bourne Identity
+
+The Bourne Supremacy
+
+The Boys from Brazil
+
+The Bucket List
+
+The Day of the Dolphin
+
+The Deep
+
+The Dirty Dozen
+
+The Endless Summer
+
+The Fifth Element
+
+The Flim-Flam Man
+
+The Graduate
+
+The Great Escape
+
+The Hunt for Red October
+
+The Italian Job
+
+The Last Remake of Beau Geste
+
+The Last Starfighter
+
+The Maltese Falcon
+
+The Man with One Red Shoe
+
+The Mechanic
+
+The Nutty Professor
+
+The Odessa File
+
+The Omega Man
+
+The Right Stuff
+
+The Running Man
+
+The Sting
+
+The Terminator
+
+The Thief Who Came to Dinner
+
+The Wedding Singer
+
+The Wild Bunch
+
+Them!
+
+Thunderball
+
+Time Runner
+
+Timerider: The Adventure of Lyle Swann
+
+Top Gun
+
+Topaz
+
+Tough Guys
+
+Toys
+
+Tremors
+
+Tron
+
+Unforgiven
+
+Vanishing Point
+
+Voyage to the Bottom of the Sea
+
+Wall Street
+
+War Games
+
+War and Peace
+
+Wayne's World
+
+Weird Science
+
+Who Framed Roger Rabbit
+
+Willard
+
+Willy Wonka & the Chocolate Factory
+
+Zero Tolerance
+Robert Patrick
+Titus Welliver
+Mick Fleetwood
+Miles O'Keeffe
+Kristen Meadows
+Barbara Patrick
+Jeffrey Anderson-Gunter
+
+Matt Damon appeared in: 
+The Bourne Identity
+The Bourne Supremacy
+The Bourne Supremacy
+Invictus
+Good Will Hunting
+
+Carrie Fisher appeared in: 
+The Man with One Red Shoe
+Star Wars
+Star Wars: Episode V - The Empire Strikes Back
+Star Wars: Episode VI - Return of the Jedi
+
+Steve McQueen appeared in: 
+Papillon
+The Great Escape
+Nevada Smith
+On Any Sunday
+Bullitt
+
+Ludacris appeared in: 
+2 Fast 2 Furious
+
+Morgan Freeman appeared in: 
+Unforgiven
+The Bucket List
+Invictus
+
+Movies released in 1967: 
+The Dirty Dozen
+The Graduate
+The Flim-Flam Man
+Cool Hand Luke
+Casino Royale
+Bonnie and Clyde
+
+Movies released in 1998: 
+The Fifth Element
+Good Will Hunting
+Deathline
+Austin Powers: International Man of Mystery
+
+bash-3.2$ exit
+exit
+
+Script done on Fri 22 Apr 2011 02:07:07 AM PDT

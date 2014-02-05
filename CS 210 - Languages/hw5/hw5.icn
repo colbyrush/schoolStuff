@@ -1,0 +1,245 @@
+# Colby Rush, CS 210 HW#5, Unicon assignment
+
+#Memory for bobby
+#exiting the maze
+
+
+procedure main(argv)
+    #Get input
+    s_row := [] 
+    t := 0
+    s_col := [] #Unexplored spots
+    Maze := [] #maze map
+    in := open (f := argv[1], "r") | stop ("Unable to read", f)
+    while put(Maze, read(in))
+    
+    #Draw initial maze
+    write("Starting Maze:")
+    s1:= ""
+    every r := 1 to *Maze do #draws initial maze and saves Bobby and the Monster location
+    {
+        every c := 1 to *Maze[1] do
+            {
+                if Maze[r,c] === "@" then
+                    {
+                        b_row := r
+                        b_col := c
+                    }
+                if Maze[r,c] === "M" then
+                    {
+                        m_row := r
+                        m_col := c
+                    }
+                s1 := s1 || Maze[r,c]
+            }
+        write(s1)
+        s1 := ""
+    }
+    write("Bobby: ",b_row,",", b_col)
+    write("Monster: ",m_row,",", m_col)
+
+    while W:= 0 do
+        {
+            #Find usuable directions for Bobby
+            bx := 0
+            b_direc := []            
+            if Maze[b_row - 1, b_col] == "." then
+                {
+                    put(b_direc, "N")
+                    bx := bx + 1
+                }
+            if Maze[b_row + 1, b_col] == "." then
+                {
+                    put(b_direc, "S")
+                    bx := bx + 1
+                }
+            if Maze[b_row, b_col + 1] == "." then    
+                {
+                    put(b_direc, "E")
+                    bx := bx + 1
+                }
+            if Maze[b_row, b_col - 1] == "." then
+                {
+                    put(b_direc, "W")
+                    bx := bx + 1
+                }
+
+
+            #Decide Bobby's move
+            if bx > 0 then
+                {
+                    put(s_row, b_row)
+                    put(s_col, b_col)
+                }    
+                    
+            #traceback
+            if bx == 0 then
+                {
+                    while bx == 0 do
+                        {
+                            
+                            Maze[b_row,b_col] := "*"
+                            
+                            b_row := s_row[*s_row - t]
+                            b_col := s_col[*s_col - t]
+                            
+                            Maze[b_row,b_col] := "@"
+
+                            if Maze[b_row - 1, b_col] == "." then
+                                bx := bx + 1
+                            if Maze[b_row + 1, b_col] == "." then
+                                bx := bx + 1
+                            if Maze[b_row, b_col + 1] == "." then    
+                                bx := bx + 1
+                            if Maze[b_row, b_col - 1] == "." then
+                                bx := bx + 1
+                            
+                            t := t + 1
+                            if t == *s_row then
+                                {
+                                    write ("No exit found, Bobby starved!")
+                                    break
+                                }
+
+                        }
+                }
+            
+            b_choice := ?bx
+            if b_direc[b_choice] == "N" then
+                {
+                    Maze[b_row, b_col] := "*"
+                    Maze[b_row - 1, b_col] := "@"
+                    b_row := b_row - 1
+                }
+            if b_direc[b_choice] == "S" then
+                {
+                    Maze[b_row, b_col] := "*"
+                    Maze[b_row + 1, b_col] := "@"
+                    b_row := b_row + 1
+                }
+            if b_direc[b_choice] == "E" then
+                {
+                    Maze[b_row, b_col] := "*"
+                    Maze[b_row, b_col + 1] := "@"
+                    b_col := b_col + 1
+                }
+            if b_direc[b_choice] == "W" then
+                {
+                    Maze[b_row, b_col] := "*"
+                    Maze[b_row, b_col - 1] := "@"
+                    b_col := b_col - 1
+                }
+            
+
+
+            #Find usuable directions for monster
+            mx := 0
+            m_direc := []
+            
+            if (Maze[m_row - 1, m_col] == ("."|"@"|"*")) then
+                {
+                    put(m_direc, "N")
+                    mx := mx + 1
+                }
+            if (Maze[m_row + 1, m_col] == ("."|"@"|"*")) then
+                {
+                    put(m_direc, "S")
+                    mx := mx + 1
+                }
+            if (Maze[m_row, m_col + 1] == ("."|"@"|"*")) then    
+                {
+                    put(m_direc, "E")
+                    mx := mx + 1
+                }
+            if (Maze[m_row, m_col - 1] == ("."|"@"|"*")) then
+                {
+                    put(m_direc, "W")
+                    mx := mx + 1
+                }
+            if y := 1 then #Decides to wait
+                {
+                    put(m_direc, "A")
+                    mx := mx + 1
+                }
+            
+            #Decide monster move
+            m_choice := ?mx
+            if m_direc[m_choice] == "N" then
+                {
+                    Maze[m_row,m_col] := "."
+                    Maze[m_row - 1, m_col] := "M"
+                    m_row := m_row - 1
+                }
+            if m_direc[m_choice] == "S" then
+                {
+                    Maze[m_row,m_col] := "."
+                    Maze[m_row + 1, m_col] := "M"
+                    m_row := m_row + 1
+                }
+            if m_direc[m_choice] == "E" then
+                {
+                    Maze[m_row,m_col] := "."
+                    Maze[m_row, m_col + 1] := "M"
+                    m_col := m_col + 1
+                }
+            if m_direc[m_choice] == "W" then
+                {
+                    Maze[m_row,m_col] := "."
+                    Maze[m_row, m_col - 1] := "M"
+                    m_col := m_col - 1
+                }            
+            if m_direc[m_choice] == "A" then
+                Maze[m_row,m_col] := "M"            
+
+            
+            #Draw map each move
+            s1:= ""
+            every r := 1 to *Maze do
+                {
+                    every c := 1 to *Maze[1] do
+                        {
+                            s1 := s1 || Maze[r,c]
+                        }
+                    write(s1)
+                    s1 := ""
+                }
+
+            #Check if eaten
+            if b_row == m_row then
+                {
+                    if b_col == m_col then
+                        {
+                            Maze[b_row,b_col] := "M"
+                            write ("Bobby has been eaten by the Monster!")
+                            break
+                        }
+                }
+            if m_row == b_row then
+                {
+                    if m_col == b_col then
+                        {
+                            Maze[b_row,b_col] := "M"
+                            write ("Bobby has been eaten by the Monster!")
+                            break
+                        }
+                }
+            
+
+            #Check if escape
+            if (b_row == (1|*Maze)) then
+                {        
+                    write ("Bobby has escaped!")
+                    break
+                }
+            if (b_col == (1|*Maze[1])) then
+                {
+                    write ("Bobby has escaped!")
+                    break
+                }
+
+
+            write("Bobby: ",b_row,",", b_col)
+            write("Monster: ",m_row,",", m_col)
+            write("")
+        }
+        end

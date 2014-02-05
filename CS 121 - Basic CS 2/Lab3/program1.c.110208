@@ -1,0 +1,26 @@
+Script started on Tue 08 Feb 2011 12:13:09 PM PST
+bash-3.2$ ./a.out
+Please enter a filename: test1.dat
+Your filename is test1.dat
+Your min is: -1.952576 
+Your max is: 2.264230 
+Your average is: 0.194635 
+Your standard deviation is:1.395483 
+ bash-3.2$ ./a.out
+Please enter a filename: test2.dat
+Your filename is test2.dat
+Your min is: 2.700000 
+Your max is: 118.240000 
+Your average is: 48.990312 
+Your standard deviation is:25.588591 
+ bash-3.2$ ./a.out
+Please enter a filename: test3.dat
+Your filename is test3.dat
+Your min is: 0.000000 
+Your max is: 0.480000 
+Your average is: 0.258723 
+Your standard deviation is:0.134132 
+ bash-3.2$ exit
+exit
+
+Script done on Tue 08 Feb 2011 12:13:30 PM PST

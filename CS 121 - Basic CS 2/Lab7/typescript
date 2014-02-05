@@ -1,0 +1,47 @@
+Script started on Thu 24 Mar 2011 10:06:39 AM PDT
+bash-3.2$ ./a.out
+Array (a) or linked list (l)?a
+Current array: 
+1 2 3 4 5 6 7 8 9 10 
+Enter threshold value: 
+4
+Filter above (a), or below (b)?
+a
+New array: 
+4 5 6 7 8 9 10 
+bash-3.2$ ./a.out
+Array (a) or linked list (l)?a
+Current array: 
+1 2 3 4 5 6 7 8 9 10 
+Enter threshold value: 
+4
+Filter above (a), or below (b)?
+b
+New array: 
+1 2 3 4 
+bash-3.2$ ./a.out
+Array (a) or linked list (l)?l
+Current list: 
+1 2 3 4 5 6 7 8 9 
+
+Enter threshold value: 
+4
+Filter above (a), or below (b)?
+a
+New list: 
+4 5 6 7 8 9 
+bash-3.2$ ./a.out
+Array (a) or linked list (l)?l
+Current list: 
+1 2 3 4 5 6 7 8 9 
+
+Enter threshold value: 
+4
+Filter above (a), or below (b)?
+b
+New list: 
+1 2 3 4 
+bash-3.2$ exit
+exit
+
+Script done on Thu 24 Mar 2011 10:07:04 AM PDT

@@ -1,0 +1,9 @@
+using namespace std
+
+#include <stdio.h>
+
+int main (int argc, char **argv)
+{
+  char name[100];
+  printf("Enter a name");
+  gets(

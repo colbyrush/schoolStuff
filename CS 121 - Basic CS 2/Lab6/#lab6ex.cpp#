@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type></HEAD>
+<BODY><PRE>#include &lt;iostream&gt;
+
+template &lt;typename T&gt;
+class Node {
+public:
+  Node&lt;T&gt; *next;
+  T data;
+};
+
+/**
+ * Represents a basic linked list.
+ * @invariant The head pointer must be initialized to NULL.
+ */
+
+template &lt;typename T&gt;
+class List {
+public:
+
+  /**
+   * Constructs a new list, ensuring head is initialized to NULL.
+   */
+
+  List()
+    : head_ (NULL)
+  { }
+
+  /**
+   * Frees the list, preventing memory leaks.
+   */
+
+  ~List()
+  {
+    delete head_;
+  }
+
+  /**
+   * Adds a new node to the end of the list. 
+   * @param[in] data The data to hold within the node.
+   * @returns True if insertion was successful, false otherwise.
+   */
+
+  bool add_node(T data)
+  {
+    Node&lt;T&gt; *itr = head_;
+    Node&lt;T&gt; *node = new Node&lt;T&gt;;
+    
+    node-&gt;next = NULL;
+    node-&gt;data = data;
+
+    while (itr-&gt;next != NULL)
+      itr = itr-&gt;next;
+
+    itr-&gt;next = node;
+
+    return true;
+  }
+
+
+  /**
+   * Removes the first node in the list that has data matching the parameter.
+   * @param[in] data The data to search for.
+   * @returns True if deletion was successful, false otherwise.
+   */
+
+  bool delete_node_by_info(T data)
+  {
+    Node&lt;T&gt; *itr = head_;
+    Node&lt;T&gt; *lag = head_;
+
+    while (itr-&gt;data != data)
+      itr = itr-&gt;next;
+    
+    lag-&gt;next = itr-&gt;next;
+
+    return true;
+  }
+
+  /**
+   * Returns a reference to the head of the list.
+   * @return A reference to the list's head pointer.
+   * @note This is dangerous, as client code can alter the list pointer.
+   */
+
+  Node&lt;T&gt; *&amp; head() 
+  { return head_; }
+
+  
+private:
+  Node&lt;T&gt; *head_;
+};
+
+
+
+int main(int argc, char **argv)
+{
+  // Construct a list that holds integers.
+  List&lt;int&gt; oh_no;
+  oh_no.add_node(100);
+  oh_no.add_node(200);
+  oh_no.add_node(300);
+
+  // Examine the data of the list's head
+  std::cout &lt;&lt; oh_no.head()-&gt;data &lt;&lt; std::endl;
+
+  // Construct a list that holds strings.
+  List&lt;std::string&gt; goodness;
+  goodness.add_node("Hello!");
+  goodness.add_node("Oops!");
+  goodness.add_node("Am I leaking memory here? :(");
+
+  // Examine the data of the list's head
+  std::cout &lt;&lt; goodness.head()-&gt;data &lt;&lt; std::endl;
+
+  // Construct a list of floats.
+  List&lt;float&gt; badnews;
+  
+  // Example the data of the list's head
+  std::cout &lt;&lt; badnews.head()-&gt;data &lt;&lt; std::endl;
+
+  return 0;
+}

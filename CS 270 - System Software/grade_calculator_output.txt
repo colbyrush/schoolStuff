@@ -1,0 +1,72 @@
+
+Name: Stu
+
+Score for Assignment 1: 53
+Score for Assignment 2: 64
+Score for Assignment 3: 45
+Score for Assignment 4: 99
+Score for Assignment 5: 77
+Score for Assignment 6: 81
+Score for Assignment 7: 22
+Score for Quiz 1: 22
+Score for Quiz 2: 19
+Score for Quiz 3: 24
+Score for Exam 1: 75
+Score for Exam 2: 89
+Score for Final Exam: 142
+_____________________________________________________
+Percentage per category:
+Assignments: 59
+Quizzes: 86
+Exams: 82
+Final Exam: 71
+Your weighted percentage is: 70
+Your Grade Point is: C
+
+Name: Colby
+
+Score for Assignment 1: 75
+Score for Assignment 2: 77
+Score for Assignment 3: 99
+Score for Assignment 4: 56
+Score for Assignment 5: 78
+Score for Assignment 6: 86
+Score for Assignment 7: 19
+Score for Quiz 1: 19
+Score for Quiz 2: 23
+Score for Quiz 3: 21
+Score for Exam 1: 86
+Score for Exam 2: 92
+Score for Final Exam: 187
+_____________________________________________________
+Percentage per category:
+Assignments: 67
+Quizzes: 84
+Exams: 89
+Final Exam: 93
+Your weighted percentage is: 80
+Your Grade Point is: B
+
+Name: Alycia
+
+Score for Assignment 1: 99
+Score for Assignment 2: 99
+Score for Assignment 3: 99
+Score for Assignment 4: 99
+Score for Assignment 5: 99
+Score for Assignment 6: 99
+Score for Assignment 7: 22
+Score for Quiz 1: 22
+Score for Quiz 2: 22
+Score for Quiz 3: 21
+Score for Exam 1: 88
+Score for Exam 2: 88
+Score for Final Exam: 187
+_____________________________________________________
+Percentage per category:
+Assignments: 84
+Quizzes: 86
+Exams: 88
+Final Exam: 93
+Your weighted percentage is: 87
+Your Grade Point is: B

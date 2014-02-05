@@ -1,0 +1,184 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int DidIDoGood = 0;
+int totalcost;
+int totalmoves;
+int ySize;
+int xSize;
+int xStart;
+int yStart;
+int xGoal;
+int yGoal;
+
+const int R = 1;
+const int f = 2;
+const int F = 4;
+const int h = 5;
+const int r = 7;
+const int M = 10;
+const int W = 1000;
+
+
+typedef struct treeData TREEDATA;;
+
+struct treeData {
+  int cost;
+  int curX;
+  int curY;
+  int checked;
+  TREEDATA *up, *down, *left, *right;
+};
+
+void mapInput(FILE * map);
+void makeMap (FILE * map, char MapDisplay[ySize][xSize]);
+void printMap (char MapDisplay[ySize][xSize]);
+void MakeTree (char MapDisplay[ySize][xSize]);
+
+int main(int argc, char **argv)
+{
+  TREEDATA *tiles = NULL;
+
+  FILE * map;
+  map = fopen ("map.txt", "r");
+  if (map == NULL)
+    perror ("Error opening file!");
+  else
+    {
+      mapInput(map);
+      char startMap[ySize][xSize];
+      char MapDisplay[ySize][xSize];
+      makeMap(map, MapDisplay);
+      printMap(MapDisplay);
+
+      //add algorithm input choice here later
+
+      //      breadthFirst(MapDisplay, map);
+    }
+  return 0;
+}
+ 
+void mapInput (FILE * map)
+{
+  char buffer;
+  char x[3];
+  char y[3];
+  int n = 0;
+
+  while (buffer != ' ')
+    {
+      buffer = fgetc (map);
+      x[n] = buffer;
+      n++;
+    }
+
+  xSize = atoi(x);
+
+  n = 0;
+
+  while (buffer != '\n')
+    {
+      buffer = fgetc (map);
+      y[n] = buffer;
+      n++;
+    }
+  
+  ySize = atoi(y);
+
+  printf("xSize = %d; ySize = %d \n", xSize, ySize);
+
+  n = 0;
+
+  while (buffer != ' ')
+    {
+      buffer = fgetc (map);
+      x[n] = buffer;
+      n++;
+    }
+
+  xStart = atoi(x);
+
+  n = 0;
+
+  while (buffer != '\n')
+    {
+      buffer = fgetc (map);
+      y[n] = buffer;
+      n++;
+    }
+  
+  yStart = atoi(y);
+
+  printf("xStart = %d; yStart = %d \n", xStart, yStart);
+
+  n = 0;
+
+  while (buffer != ' ')
+    {
+      buffer = fgetc (map);
+      x[n] = buffer;
+      n++;
+    }
+
+  xGoal = atoi(x);
+
+  n = 0;
+
+  while (buffer != '\n')
+    {
+      buffer = fgetc (map);
+      y[n] = buffer;
+      n++;
+    }
+
+  yGoal = atoi(y);
+
+  printf("xGoal = %d; yGoal = %d", xGoal, yGoal);
+  
+}
+
+
+void makeMap (FILE * map, char MapDisplay[ySize][xSize])
+{
+  int row = 0;
+  int col = 0;
+
+  char buffer;
+  printf("\nStart Map:\n");
+  while (buffer = fgetc(map), buffer != EOF)
+    {
+      if (buffer == '\n')
+        {
+          MapDisplay[row][col] = buffer;
+          row++;
+          col = 0;
+        }
+      else
+        {
+          MapDisplay[row][col] = buffer;
+          col++;
+        }
+
+    }
+
+      MapDisplay[yStart][xStart] = 'S';
+      MapDisplay[yGoal][xGoal] = 'G';
+
+}
+
+void printMap (char MapDisplay[ySize][xSize])
+{
+
+  int row;
+  int col;
+  
+  for (row = 0; row < ySize; row++)
+    {
+      for (col = 0; col < xSize; col++)
+        printf("%c", MapDisplay[row][col]);
+      printf("\n");
+    }
+}
+
+void breadthFirst (char MapDisplay[ySize][xSize])
+{
