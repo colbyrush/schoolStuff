@@ -1,0 +1,21 @@
+programming log
+
+Started out the assignment simply taking the code from Hello4 and using it as a template to make sure I didn't mess up any basics, plus it gave me a pretty good place to start from. Edited a few things around to see what would happen, when I felt I had a decent grasp, moved onto the actual assignment.
+
+Took a little figuring out how to reroute the main to an InitGraphics function. Messed around with static keyword before realizing I had to make new instances of the class to handle non-static functions for me. Also took a bit to figure out the AWT would handle certain functions automatically (like paintComponent).
+
+Test different equations to make sure it's working before moving on to viewport and other things.
+
+I love dumb mistakes, like getting so used to Java automatically running other functions in the class you forget to call the ones it actually DOESN'T. It's an incredible motivator for teaching myself creative new ways to swear at the computer.
+
+Got the first function working, it's a lot of dots, but that means I just have to up my sample size. Also, it's sideways. Gotta get out of thinking in the regular x/y coord system before I can fix that.
+
+The first two functions are graphed now - just playing around with the scaling of them before I get to isolating them and setting up the third and final equation.
+
+3.1 equation: sqrt((.5)x^3 + (.5)x^2); 3.2: sqrt(x^3 + (.5)x^2); 3.3: sqrt((2)x^3 + (.5)x^2). 3.1 is black, 3.2 is red, 3.3 is green. Based these colors off the Hello4 program since it'd be super easy to do, and it works.
+
+So since all the equations are graphed, all that remains is to slap corresponding axes onto each one and set up the viewport functions.
+
+Okay, viewport is really vague and complicated in how to implement. Not really sure how to go about doing it. I figure I'm better off turning it in and trying to learn from my mistakes than keep banging my head against the wall. Added some axes to my completed functions and called it a day.
+
+Figured out how to make the viewport and everything to keep scrolling around the map, realized I would have to almost completely start over because I've hard coded in the values to make all the graphs fit and look nice in the default window. Oops. Looks like that's for next lesson then. 
