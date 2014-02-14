@@ -1,4 +1,4 @@
-programming log
+programming log - colby rush, cs 324
 
 Started out the assignment simply taking the code from Hello4 and using it as a template to make sure I didn't mess up any basics, plus it gave me a pretty good place to start from. Edited a few things around to see what would happen, when I felt I had a decent grasp, moved onto the actual assignment.
 
@@ -12,10 +12,30 @@ Got the first function working, it's a lot of dots, but that means I just have t
 
 The first two functions are graphed now - just playing around with the scaling of them before I get to isolating them and setting up the third and final equation.
 
-3.1 equation: sqrt((.5)x^3 + (.5)x^2); 3.2: sqrt(x^3 + (.5)x^2); 3.3: sqrt((2)x^3 + (.5)x^2). 3.1 is black, 3.2 is red, 3.3 is green. Based these colors off the Hello4 program since it'd be super easy to do, and it works.
+Equation one ended up as
+
+for (double x = 0; x <= 3*(Math.PI) ; x+=.05)
+      {
+       int y = (int)((20*(4.0*(Math.pow(Math.E, -0.25*x)))*(Math.cos(4*x))));
+       int intx = (int)(20*x);
+       DrawTo2D(g, y+100, intx+275, 3);
+      }
+
+Equation two ended up as 
+
+for (double x = -9; x <= 9 ; x+=.0001)
+      {
+       int y = (int)(5*(2/(0.5 - Math.sin(x/2))));
+       int intx = (int)(x*5);
+       DrawTo2D(g, y+225, intx+115, 5);
+      }
+
+The constants I'm multiplying by inside the for loops are basically just to scale the function up so it's viewable in my 500x500 frame. The constants being added are to offset the points so they line up nicely in each quadrant.
+
+3.1 equation: sqrt((.5)x^3 + (.5)x^2); 3.2: sqrt(x^3 + (.5)x^2); 3.3: sqrt((2)x^3 + (.5)x^2). 3.1 is black, 3.2 is red, 3.3 is green. Based these colors off the Hello4 program since it'd be super easy to do, and it works. Those equations are mostly posted for my benefit so I don't forget their simplified forms, and they end up very similar to the above for loops.
 
 So since all the equations are graphed, all that remains is to slap corresponding axes onto each one and set up the viewport functions.
 
 Okay, viewport is really vague and complicated in how to implement. Not really sure how to go about doing it. I figure I'm better off turning it in and trying to learn from my mistakes than keep banging my head against the wall. Added some axes to my completed functions and called it a day.
 
-Figured out how to make the viewport and everything to keep scrolling around the map, realized I would have to almost completely start over because I've hard coded in the values to make all the graphs fit and look nice in the default window. Oops. Looks like that's for next lesson then. 
+Figured out how to make the viewport and everything to keep scrolling around the map, realized I would have to almost completely start over because I've hard coded in the values to make all the graphs fit and look nice in the default window. Oops. I think I did the work backwards, making the functions before making the window move to the creation space. I'll save viewports for next lesson.
