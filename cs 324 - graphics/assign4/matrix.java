@@ -1,5 +1,3 @@
-
-
 public class matrix
 {
     
@@ -8,44 +6,38 @@ public class matrix
     
     public matrix()
     {
-     
-	for (int i = 0; i < 4; i++)
-	{
-	    for ( int j = 0; j < 4; j++)
-	    {
-		matrix[i][j] = 0;
-	    }
+   
 	}
-    
 
+
+    public void setIdent()
+    {
+    	this.SetMVal(0,0,1);
+    	this.SetMVal(0,1,0);
+    	this.SetMVal(0,2,0);
+    	this.SetMVal(0,3,0);
+    	this.SetMVal(1,0,0);
+    	this.SetMVal(1,1,1);
+    	this.SetMVal(1,2,0);
+    	this.SetMVal(1,3,0);
+    	this.SetMVal(2,0,0);
+    	this.SetMVal(2,1,0);
+    	this.SetMVal(2,2,1);
+    	this.SetMVal(2,3,0);
+    	this.SetMVal(3,0,0);
+    	this.SetMVal(3,1,0);
+    	this.SetMVal(3,2,0);
+    	this.SetMVal(3,3,1);
     }
-
+    
     public void SetMVal(int height, int width, double val)
     {
-	matrix[height][width] = val;
+	this.matrix[height][width] = val;
     }
 
     public double GetMVal(int height, int width)
     {     
-	return matrix[height][width];
-    }
-
-    public static matrix MultiplyM(double transVal, matrix A, matrix B)
-    {
-	matrix C = new matrix();
-
-	for( int i = 0; i < 1; i++ )
-	{
-	    for( int j = 0; j < 4; j++ )
-	    	{
-	    		for( int x = 0; x < 4; x++ )
-	    		{
-		    C.matrix[i][x] += A.matrix[i][x] * B.matrix[x][j];
-	    		}
-	    	}	
-	}
-
-		return C;
+	return this.matrix[height][width];
     }
 
 }
