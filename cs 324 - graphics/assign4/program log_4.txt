@@ -1,0 +1,9 @@
+programming log assignment 4 - colby rush, cs 324
+
+Started out the assignment simply taking code Assign2 and building on it. Realizing you handed a lot of the base code to us in the handouts was nice, since it made building all my 3D transforms and other primitives fairly easy. It was also just a matter of converting all of window/viewport programs from earlier to 3D, and add a view tiny things (get,reset) to make it less tedious to get and set certain values. Did the same for the matrix class since those utilities seemed to be really useful.
+
+I'm not a big fan of how I handled DefineElementaryTransform, with the huge list of if and putting values in by hand, but it seems like the best way to handle a bunch of possible of different transform matricies. I just have to make sure not to send the wrong macro. Also the same deal with my window class. It's pretty ugly, but it works.
+
+Broke up my program into different classes/files as it started to get bigger and bigger. Makes everything a little easier to keep track of, as well as keeping the paintComponent and initGraphics apart from all the primitive backends. Just have to keep track of what is where.
+
+Once I got all the primitives build and my basic functions figured out and debugged, it was actually kind of hard to figure out where to go from there, since I'd been so caught up in the mechanics. But I eventually started on the graphic program, initializing the camera and the first matrix in a simple x_trans that didn't do anything, just to make a matrix automatically.
