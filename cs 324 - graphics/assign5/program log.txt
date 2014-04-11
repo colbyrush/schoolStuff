@@ -1,0 +1,21 @@
+Program Log - Assignment 5
+
+It took two days on/off work to get openGL to actually work on my computer. I had to go through a few different versions of Visual Studio because it was either not supported, or my installation would get screwed up, or the help I got didn't actually help. But the basic program you gave us works now, thank god. Now I can get to actual work.
+
+Altered the cube tutorial program for my rubick's cube segment. Took a minute to get all the colors correct, but I'm betting that if I just color one cube like a rubick's cube, I can just duplicate it and move it a bit. Since every cube has the same color on every side, I can get away with just rendering each face without having to worry about specific colors for specific sides of the cube since it'll look correct on every side.
+
+Took a little work to get glTranslatef working the correct way, but now that I've got it down the rubick's cube was trivial to make. The gaps were a little tough to find a sweet spot where you could still seem them but without it being so close the shapes just squished together, but I figured that out easily. I just translated the squished cube a little to the left of the gapped one and just let them twirl around each other. One down.
+
+Don't know how to implement euler's constant in openGL so I just used the constant 2.71828182845904523536 because why not. It let me finish my function though, after spending 15 minutes wondering why my program wasn't working, then realizing I had put i+.01 instead of i+=.01. Cool. But the first function is graphed, now onto the second one. One thing I noticed as the difference between GL_POINTS and GL_LINES is that GL_LINES doesn't really graph the same as points, since it relies on connecting two vertex by a straight line. Normally this wouldn't really matter, but since I'm taking such small samples to ensure an accurate curve, it doesn't draw some of the lines since the segment is too small, or the line is so thin. Also, I can't adjust the size of the line really, since glLineWidth does weird things. Predictably, points is better for displaying a curve. Also got labeling to work after I figured out how to do my name. Notbad.jpg
+
+The 3d plot seems to be the hardest one. I just started off graphing the equation and it looks like a weird shape. I'm trying to figure out how to account for the colors part, and started out just simply finding the smallest and largest z and adjusting the color accordingly to see what happens. It seemed to work pretty well actually. Screenshot included.
+
+Starting on the hallway, basically just making a long box to start it off. Then add in little details by making appropriate sized shapes and transforming them into the box until it roughly looks like the hallway as seen from the stairwell, and I really mean rough.. My model is roughly 12 height by 10 width by 50 length. Feet, or at least close enough the ratio should be acceptable since the units are in "Colby windmilling his arms to guess distance". I added in the pillar and a few door ways, then debated by what colors I wanted to make everything before just settling on iterating through the rubick's cube colors to make everything more visible. I am going to rely on the wireframe view of this to display my work.
+
+Rendering text was pretty easy, by the way. Just a quick glutBitmapCharacter loop.
+
+
+
+
+
+

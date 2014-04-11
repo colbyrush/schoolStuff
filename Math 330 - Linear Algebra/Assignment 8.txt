@@ -1,0 +1,132 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Linear Algebra - Assignment 8}
+
+\author{Colby Rush}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Problem 1}
+\begin {enumerate}
+\item  From the given set, we first test if the vectors are linearly independent with the set of equations
+$\\
+c_1 + c_3 = 0
+\\
+c_1 - c_2 + c_3 = 0
+\\
+c_2 + c_3 = 0
+\\
+c_1 - c_3 = 0$
+\\
+From here, we can make a matrix to help us:
+$\left( \begin{array}{ccc}
+1 & 0 & 1 \\
+1 & -1 & 1 \\
+0 & 1 & 1 \\
+1 & 0 & -1 \end{array} \right)
+$
+\\
+Eventually yielding the reduced matrix of
+$\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0 \end{array} \right)
+$, meaning the vectors are linearly independent. However, since we only have three rows, the vectors do not span the given R. Thus, they are not a basis for the given vector space.
+
+
+\item  From the given set, we first test if the vectors are linearly independent with the set of equations
+$\\
+c_1 + c_3 + c_4 = 0
+\\
+-c_2 + c_3 + c_4 = 0
+\\
+c_2 + c_3 + c_4 = 0
+\\
+c_1 + c_3 - c_4 = 0$
+\\
+From here, we can make a matrix to help us:
+$\left( \begin{array}{cccc}
+1 & 0 & 1 & 1 \\
+0 & -1 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+1 & 0 & 1 & -1 \end{array} \right)
+$
+\\
+Eventually yielding the reduced matrix of
+$\left( \begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \end{array} \right)
+$, meaning the vectors are linearly independent, and span the given R. Thus, they are a basis for the given vector space.
+\item To check for linear independence, we first get the equation $c_1(x) + c_2(1+x) + c_3(x - x^2) = 0$, or $(C_1 + c_2 + c_3)x + C_2 + (c_3)x^2 = 0$. When $x = 0$, this implies $c_2 = 0$, so $(c_1 + c_3)x + (c_3)x^2 = 0$. When $x = -1$, $c_1 = 0$, thus they are linearly independent and we know they span, so the set is a basis for the vector space.
+\item The given set is not a basis for the vector space, since it does not span the given $P_2$
+\end {enumerate}
+\section{Problem 2}
+\begin {enumerate}
+\item The dimension of the space given is 3, with a basis of $(x, x^2)$
+\item The dimension of the space given is 3, with a basis of 
+\item The dimension of the space given is 15, since we rearrange it into a lower triangular using row operations, and the basis is 
+\item The dimension of the space given is 4
+\end {enumerate}
+\section{Problem 3}
+\begin {enumerate}
+\item First, we use the given set to make the system of equations
+$\\
+c_1 + c_2 + c_3 + c_4 = 1
+\\
+c_2 + c_3 + c_4 = 2
+\\
+c_3 + c_4 = 3
+\\
+c_1 + c_4 = 4$
+\\
+From here, we can make a matrix to help us:
+$\left( \begin{array}{ccccc}
+1 & 1 & 1 & 1 & 1 \\
+0 & 1 & 1 & 1 & 2 \\
+0 & 0 & 1 & 1 & 3 \\
+1 & 0 & 0 & 1 & 4\end{array} \right)
+$
+\\
+This eventually gives us the reduced matrix giving the answer of 
+$\left( \begin{array}{cc}
+-1 & -1 \\
+-2 & 5 \end{array} \right)
+$
+\item Using the given basis, we can make a matrix:
+$\left( \begin{array}{ccc}
+1 & 1 & 0 \\
+-1 & 1 & 0 \\
+0 & 0 & 1 \end{array} \right)
+$ to represent the basis. And since $f(x) = 2 - x + 3x^2$ can be represented as $2, -1 , 3$, we just set the matrix equal to that and solve, giving us the matrix operation (rearranged for columns) 
+$\left( \begin{array}{cccc}
+1 & -1 & 0 \\
+1 & 1 & 0 \\
+0 & 0 & 1 \end{array} \right)
+$ 
+$\left( \begin{array}{c}
+1  \\
+-1 \\
+3 \end{array} \right)
+$ eventually giving us the answer
+$\left( \begin{array}{c}
+2  \\
+0 \\
+3 \end{array} \right)
+$
+
+\end {enumerate}
+
+
+\end{document}

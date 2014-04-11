@@ -1,0 +1,91 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\tab}{\hspace*{2em}}
+
+\title{Analysis of Algorithms - Assignment 5}
+
+\author{Colby Rush}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Section 5.1}
+\subsection{No. 2}
+\begin {enumerate}
+\item MinMax(A[0...n], minval, maxval) 
+\\if right = left
+\\ \tab minval = A[left]; maxval = A[left]
+\\ else if right - left = 1
+\\ \tab if A[left] $<=$ A[right]
+\\ \tab \tab minval = A[left]; maxval = A[right]
+\\ \tab else minval = A[right]; maxval = A[left];
+\\ else
+\\ \tab MinMax(A[left...(left + right)/2], minval, maxval)
+\\ \tab MinMax(A[((left + right)/2)+1....r, minval2, maxval2]
+\\ \tab if minval2 $<$ minval
+\\ \tab \tab minval = minval2
+\\ \tab if maxval2 $>$ maxval
+\\ \tab \tab maxval = maxval2
+\item See attached paper
+\item This algorithm makes 1.5n comparisons as opposed to 2n comparisons the brute force method makes
+\end {enumerate}
+\subsection{No. 5}
+\begin {enumerate}
+\item Applying the master theorem, we get a = 4, b = 2, and d = 1. Since $a > b^d$, T(n) is in $\theta (n^{log_2 4}) = \theta(n^2)$
+\item Again, a = 4, b = 2, d = 2. a = $b^d$, so T(n) is in $\theta(n^2log n)$
+\item a = 4, b = 2, d =3. $a < b^d$, so T(n) is in $\theta(n^3)$
+\end {enumerate}
+\subsection{No. 11} We can solve this by placing a tromino in the center of the board, reducing the problem to four smaller boards, each with a missing square. We just recursively solve these subboards until we have a trivial 2x2 board with a missing square.
+
+\section{Section 5.2}
+\subsection{No. 1} See attached paper
+\subsection{No. 7}
+\begin {enumerate}
+\item Quicksort is about $n*log(n)$, and insertion sort is about $n^2$, quick math says quicksort is about 166666 times faster than insertion
+\item False. Eventually at a high enough n, quicksort will become more efficient than insertion sort.
+\end {enumerate}
+\subsection{No. 11} First, randomly select a nut and comapre it to each bolt, seperating those bigger or smaller bolts into different piles. Then compare the rest of the nuts to the matched bolt, also seperating larger and smaller ones into different piles. That basically just splits the problem into two smaller instances of the problem in a quicksort way.
+
+
+\section{Section 5.4}
+\subsection{No. 2} See attached paper
+\subsection{No. 3}
+\begin {enumerate}
+\item Take the base b logs of both sides gives $log_b clog_b a = log_b a lob_b c$. Since two numbers are equal if their logs to the same base are equal, it is an equality
+\item Because it's easier to compare $n^{log_2 3}$ with $n^2$ than the other way around
+\end {enumerate}
+\subsection{No. 7} n/a
+\subsection{No. 9} The recurrence relation for the algorithm is T(n) = 143640M(n/70) for n > 1 (T(1) = 1). The master theorem turns it into p = $log_70 143640$ which is approx. 2.795, which is smaller than the number from Strassen's algorithm, 2.807
+
+
+\section{Section 5.5}
+\subsection{No. 1}
+\begin {enumerate}
+\item Assuming they're sorted in increasing order,  we split the array into two halves and compare the closest pairs in both halves, and the distance between the cutoff points of the array (rightmost of first, leftmost of second). The equation for this is roughly T(n) = 2T(n/2) + c, which is about nlogn efficiency  
+\item Yes, since nlogn efficiency is arguably an acceptable class
+\end {enumerate}
+\subsection{No. 3} n/a
+\subsection{No. 7} Since all points are the third vertex for the triangle of the hull, the farthest one is the point that maximizes the triangle's area. So P max is the point that gives the largest area when coupled with another set of points.
+
+\section{Section 6.1}
+\subsection{No. 2}
+\begin {enumerate}
+\item Very simple, compare each number in A to each number in B, repeat until every number in A has been parsed. All intersections inserted into C. Efficiency class of a about $n^2$.
+\item Even simpler, compare first A until it either matches or is smaller than the next element in B, and start over with the next element. All hits go into C. Efficiency class (assuming mergesort) is about nlog n times n
+\end {enumerate}
+\subsection{No. 3}
+\begin {enumerate}
+\item After sorting, take A[0] and A[n]. Efficiency of about nlog n.
+\item Brute force would be about $n^2$, while pre-sorting and divide and conquer are virtually the same, since they only worry about sorting the array before finding minmax.
+\end {enumerate}
+\subsection{No. 4} Mergesort yields 3000 steps, plus binary of 9 steps average case. It would take about 3009 searches. $10^6$ yields 6000020 searches.
+\subsection{No. 7} n/a
+
+\end{document}
