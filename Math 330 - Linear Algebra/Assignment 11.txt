@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Linear Algebra - Assignment 11}
+
+\author{Colby Rush}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Problem 1}
+\begin {enumerate}
+\item 
+\end {enumerate}
+
+\section{Problem 2}
+\begin {enumerate}
+\item $\left( \begin{array}{ccc}
+0 & 0 & 0\\
+1 & 0 & 0\\
+0 & 1 & 0\end{array} \right)$ is not diagonalizable because it only has non-unique eigenvalues of 0.
+\end {enumerate}
+
+
+\section{Problem 3}
+\begin {enumerate}
+\item $\left( \begin{array}{cc}
+-2 & 12\\
+-1 & 5\end{array} \right)^2 = \left( \begin{array}{cc}
+-8 & 36\\
+-3 & 13\end{array} \right)$
+\end {enumerate}
+
+
+\end{document}

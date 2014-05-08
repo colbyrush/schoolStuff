@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\tab}{\hspace*{2em}}
+
+\title{Analysis of Algorithms - Assignment 6}
+
+\author{Colby Rush}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Section 6.4}
+\subsection{No. 2}
+\begin {enumerate}
+\item For i = 1,2...n/2, check $A(i) >= max(A(2i), A(2i + 1))$. If not true, it's not a heap. Since the algorithm makes 2(n/2) compares, it's efficiency is in O(n).
+\end {enumerate}
+\subsection{No. 7}
+\begin {enumerate}
+\item No
+\end {enumerate}
+
+\section{Section 6.5}
+\subsection{No. 4}
+\begin {enumerate}
+\item See attached paper
+\end {enumerate}
+\subsection{No. 7}
+\begin {enumerate}
+\item See attached paper
+\end {enumerate}
+\subsection{No. 8}
+\begin {enumerate}
+\item See attached paper
+\end {enumerate}
+
+\section{RSA Encryption}
+See paper
+
+\section{Section 8.1}
+\subsection{No. 2}
+\begin {enumerate}
+\item See figure 8.1 in the book
+\end {enumerate}
+\subsection{No. 12}
+\begin {enumerate}
+\item We set the probability of A winning a series to P(a,b), where a is how many more games A needs and b how many more games B needs. If A wins (probability p), they need a-1 more wins while B still needs b wins. If A looses (probability q = 1 - p), A still needs a wins and B needs b - 1 wins. This leads to recurrence
+\\
+P(a,b) = pP(a - 1, b) + qP(a,b - 1) for a,b $>$ 0
+\\
+with initial condition
+\\
+P(0,b) = 1 for b $>$ 0 and P(a,0) = 0 for a $>$ 0.
+\item See attached paper
+\end {enumerate}
+
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Linear Algebra - Assignment 10}
+
+\author{Colby Rush}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Problem 1}
+\begin {enumerate}
+\item  It's a simple matter of translating the c values of each part, yielding
+$\left( \begin{array}{cc}
+2 & 2\\
+-1 & 1\end{array} \right)
+$
+\item Again, translate the c values of each part, yielding
+$\left( \begin{array}{cc}
+1 & 0\\
+0 & 1\end{array} \right)
+$
+\end {enumerate}
+
+
+\section{Problem 2}
+\begin {enumerate}
+\item We simply combine the vectors $v_1$ and $v_2$ and multiply it against A, finding $u_1 = \left( \begin{array}{c}
+10\\
+32\end{array} \right)
+$
+and $u_2 = \left( \begin{array}{c}
+3\\
+10\end{array} \right)
+$
+\end {enumerate}
+
+
+\section{Problem 3}
+\begin {enumerate}
+\item We set the equation as
+$\left( \begin{array}{cc}
+3 & 2\\
+4 & 1\end{array} \right) - 
+\left( \begin{array}{cc}
+\lambda & 0\\
+0 & \lambda \end{array} \right) = 
+\left( \begin{array}{cc}
+3 - \lambda & 2\\
+4 & 1 - \lambda\end{array} \right)$
+
+Then we find the determinant of that, which is $\lambda^2-4\lambda+5$. We can then factor it into $(\lambda + 5)(\lambda - 1)$, which gives us eigenvalues of $5, -1$. 
+
+From this, we can set the system of equations for value 5 equal to:
+\\$-2x_1 + 2x_2 = 0$
+\\$4x_1 + -4x_2 = 0$
+\\or
+\\ $\left( \begin{array}{ccc}
+-2 & 2 & 0\\
+4 & -4 & 0\end{array} \right)$
+\\ It's obvious to see the eigenspace is $c
+\left( \begin{array}{c}
+1\\
+1\end{array} \right)
+$
+for value 5.
+\\Using the same method, we reach a space of
+\\$4x_1 + 2x_2 = 0$
+\\$4x_1 + 2x_2 = 0$
+\\ Again, obvious to see, after setting $x_1$ equal to -t, that the eigenvector for value -1 is equal to $c
+\left( \begin{array}{c}
+-1\\
+2 \end{array} \right)
+$
+
+\item Using the same methods above, we find the determinant of $(-\lambda-1)(\lambda^2-1)$, giving eigenvalues of $-1,1$ and eigenvectors $c
+\left( \begin{array}{c}
+2\\
+0\\
+1\end{array} \right)
+$ for value -1, and $c
+\left( \begin{array}{c}
+1\\
+0\\
+1\end{array} \right)
+$ for value 1.
+
+\item Using the same methods above, we find the determinant of $-\lambda^3 + 3\lambda^2 -2\lambda$, giving eigenvalues of $2,1,0$ and eigenvectors $c
+\left( \begin{array}{c}
+7\\
+3\\
+1\end{array} \right)
+$ for value 2, and $c
+\left( \begin{array}{c}
+3\\
+2\\
+1\end{array} \right)
+$ for value 1, and $c
+\left( \begin{array}{c}
+1\\
+1\\
+1\end{array} \right)
+$
+
+\item Using the same methods above, we find the determinant of $(2-\lambda)(3-\lambda)(\lambda^2 - 3\lambda + 2)$, giving eigenvalues of $3,2,1$ and eigenvectors $c
+\left( \begin{array}{c}
+1\\
+2\\
+0\\
+0\end{array} \right)
+$ for value 3, and $c
+\left( \begin{array}{c}
+0\\
+0\\
+-1\\
+0\end{array} \right)
+$ for value 2, and  $c
+\left( \begin{array}{c}
+0\\
+1\\
+0\\
+0\end{array} \right)$ for value 1.
+\end {enumerate}
+
+
+\end{document}

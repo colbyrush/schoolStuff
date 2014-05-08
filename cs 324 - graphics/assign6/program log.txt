@@ -1,0 +1,3 @@
+Program Log - Assignment 6
+
+Just started off by taking my assignment 5 function for the 3d cold/hot model and alterting it for the new function. Converting the polar coordinates to x,y, and z was simple; just another 2 lines of code. But when I ran it I got a view like I was going into hyperspace. When it rotates, it's just a long, pixel-y tube. Maybe something is wrong with how I set my  values.

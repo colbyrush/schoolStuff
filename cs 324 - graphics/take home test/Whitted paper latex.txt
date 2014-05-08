@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\newcommand{\tab}{\hspace{4ex}}
+
+\title{'An Improved Illumination Model for Shaded Display'}
+
+\author{Colby Rush}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+\tab This paper describes current methods used to render a two-dimensional image in a three-dimensional scene, specifically the methods used in global illumination and light intensity modelling. It then proposes a new, improved algorithm to model this information that yields a rendering time decrease of about three-fold, while still having significant room for improvement.
+
+\section{Key Points}
+\tab The first key point of the paper lies in it's description of previous  modelling algorithms, such as Phong's, which have their own advantages, but lack true realism. The main missing element from most realistic rendering lies in both specular reflection, universal lighting, and the simulation of shadows.
+\\ 
+\indent The second key point lies in the description of the proposed improved model. Provided by ray optics, it calculates a "light intensity" for each ray from the surface of the shape to the viewer, taking the intended surface material, reflection, and direction into account to come up with the intended light intensity. The main component in determining surface material, which is the main component in determining how the light interactions with the drawn object, lies the in the variance of refraction variable. In effect, adjusting the refraction can result in a totally different lighting scheme for the overall picture.
+\\
+\indent The third key point goes over the difference between modelling with a single object and multiple ones. While rendering is relatively simple with one object, when more are introduced, light will reflect off of multiple objects before reaching the view, alsmost exponentially increasing the amount of calculations that must be made. This keeps going through the "tree" of calculations that must be made until either completed or truncated due to lack of space, calculating the light intensity at each node.
+\\
+\indent The fourth key point involves the determining of visible surfaces, by which the method does by tracing from the viewer to the object. It then calculates the light intensity, and keeps going, repeating until no other object is touched, using a sphere as the bound for ray duration.
+\\
+\indent The fifth and final key point describes how the method handles anti-aliasing, by which it simply keeps diving each section into smaller sections until all four vertex points are a reasonably close average of light intensity, or it runs out of resolution. At the same time, this also ensures each object, no matter how small, receives intersection from a ray by giving those sections their own boundry sphere to allow the ray to know their is an object somewhere within it.
+
+\section {Terms and Equations}
+\tab The paper was full of terms and equations I had never heard of before, starting right from the beginning with "illumination model", which is described later in the paper. I will be putting each new term/equation on it's own paragraph from here on out.
+\\
+\indent Lambert's cosine law (also known as cosine emission law) is the law that states that the radiant intensity or luminous instensity observed from an ideal diffusely reflecting surface or ideal diffuse radiator is directly proportional to the cosine of the angle $\theta$ between the observer's line of sight and the surface normal. 
+\begin{figure}[h!]
+  \caption{Visual representation of Lambert's cosine law (1)}
+  \centering
+  \includegraphics[width=0.4\textwidth]{cosine.png}
+\end{figure}
+\\
+\indent Bui-Tuong Phong shading is an interpolation technique for surface shading, also known as normal-vector interpolation shading. It specifically interpolates surface normals across rasterized polygons and computes pixel colors based on the interpolated normals and a reflection model. (2)
+\\
+\indent The intensity equation from Phong's model, better described by the paper itself:
+\begin{figure}[h!]
+  \caption{Intensity from Phong's model}
+  \centering
+  \includegraphics[width=0.6\textwidth]{phong.png}
+\end{figure}
+\\
+\indent Blinn and Newell's method of lighting techniques is a paper in itself, but boiled down is basically a less sophisticated and realistic method for what this paper is outlining. (3)
+\\
+\indent See paper's 17th reference for Kay. Otherwise, same as comment on Blinn and Newell.
+\\
+\indent The actual method, described better in the paper:
+\begin{figure}[h!]
+  \caption{Paper's proposed model}
+  \centering
+  \includegraphics[width=0.6\textwidth]{model.png}
+\end{figure}
+\\
+\indent Fresnel's reflection law is similarly described adequetly in the actual paper: the coefficients should vary as a function of incidence angle in a manner that depends on the material's surface properties.
+\\
+\indent Bounding volumes are also described in the key points, but I'd never heard of them until now.
+
+\section {Conclusion}
+\tab This paper shed a lot of light (heh) on how complicated lighting actually is in comparison to actually just drawing the shapes within openGL. In fact, you could argue that the drawing is the easy part; it's making everything reflect light realistically that is so difficult. So many different techniques are used, and are probably going to be developed, that it's easy to get lost and confused in how to go about doing it. However, this paper presented an algorithm that seemed, at least on the surface, relatively straightforward. All that really seemed needed to be adjusted is the refraction index, to set the "surface material" of each shape.
+\\
+\indent But I also learned some of the mathematical and mechanical foundations behind each model, how it goes about actually drawing and handling each "ray" of light, how it traces and uses each shape it encounters to calculate the light intensity by the time it finally reaches the viewer.
+\\
+\indent In conclusion, this paper, which seemingly scary, was in reality a decent crash course in the theory behind lighting systems in graphics processing, while outlining a good technique to use as an underlying graphics lighting system.
+
+\section {Bibliography}
+\begin{figure}[h!]
+  \includegraphics[width=1.1\textwidth]{blib.png}
+\end{figure}
+
+\end{document}
