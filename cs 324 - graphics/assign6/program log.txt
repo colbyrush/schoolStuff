@@ -1,3 +1,11 @@
 Program Log - Assignment 6
 
 Just started off by taking my assignment 5 function for the 3d cold/hot model and alterting it for the new function. Converting the polar coordinates to x,y, and z was simple; just another 2 lines of code. But when I ran it I got a view like I was going into hyperspace. When it rotates, it's just a long, pixel-y tube. Maybe something is wrong with how I set my  values.
+
+I've been banging my head on it for hours, and I'm not really sure if I'm even correct, since I talked to Matt and he said he got a flat surface with some curves, not a tube like I'm getting. I've noticed theres a wave going on inside the tube, but otherwise not much else has hit me as insight. Guess I'll just get to the lighting thing, since it seems to be the meat of the assignment.
+
+Started out with simple lighting literally from the glprogramming tutorials, got a start of everything being a bit brighter and darker as it rotates. Color after that wasn't much harder, and after that making multiple lights that are spread out.
+
+I figured out the materials part, and I know it's working because when I rachet through each material, the surfaces start a different color. It's just a matter of syncing it up to the quadrants.
+
+Talked to Ian and he helped me out with the graphing. Turns out I hadn't been converting from x,y to radians and thetas before plugging it into the z function. So my shape is nice and correct now, and made adding the materials a breeze. The final touches are getting my rotate function correct so I can take a few more screenshots and then getting the lighting correct.
