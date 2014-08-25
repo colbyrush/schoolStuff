@@ -1,0 +1,46 @@
+/* Beginning scanner for compiler design - Colby Rush, CS 445, Assignment 1, Last Updated 9/11/13 */
+
+%{
+#include "scanner2.tab.hacc"
+#include "scanType.h"
+using namespace std;
+#define YY_DECL extern "C" int yylex()
+int num_lines = 1;
+
+%}
+%%
+_                                  { return makeNode(num_lines, UNDERBAR, yytext); }
+[0-9]*                             { return makeNode(num_lines, NUMCONST, yytext); }
+int                                { return makeNode(num_lines, INT, yytext); }
+bool                               { return makeNode(num_lines, BOOL, yytext); }
+true                               { return makeNode(num_lines, TRUE, yytext); }
+false                              { return makeNode(num_lines, FALSE, yytext); }
+--                                 { return makeNode(num_lines, ASSIGN, yytext); }
+\+\+                               { return makeNode(num_lines, ASSIGN, yytext); }  
+\+=                                { return makeNode(num_lines, ASSIGN, yytext); }
+-=                                 { return makeNode(num_lines, ASSIGN, yytext); }
+==                                 { return makeNode(num_lines, ASSIGN, yytext); }
+!=                                 { return makeNode(num_lines, ASSIGN, yytext); }
+\<=                                { return makeNode(num_lines, ASSIGN, yytext); }
+\>=                                { return makeNode(num_lines, ASSIGN, yytext); }
+and                                { return makeNode(num_lines, AND, yytext); }
+or                                 { return makeNode(num_lines, OR, yytext); }
+if                                 { return makeNode(num_lines, IF, yytext); }
+not                                { return makeNode(num_lines, NOT, yytext); }
+break                              { return makeNode(num_lines, BREAK, yytext); }
+static                             { return makeNode(num_lines, STATIC, yytext); }
+return                             { return makeNode(num_lines, RETURN, yytext); }
+foreach                            { return makeNode(num_lines, FOREACH, yytext); }
+while                              { return makeNode(num_lines, WHILE, yytext); }
+else                               { return makeNode(num_lines, ELSE, yytext); }
+in                                 { return makeNode(num_lines, IN, yytext); }
+\/\/.*                             ; /*comments*/
+[ \t]                              ; /*white space */
+\'[^\']*(\\.[^\']*)*\'             { return makeNode(num_lines, CHARCONST, yytext); }
+[\/\<\>\%\*\+-]                    { return makeNode(num_lines, OP, yytext); }
+[\]\(\)\{\}:\;,]                   { return makeNode(num_lines, SYMBOL, yytext); }
+([a-zA-Z0-9]|_)*                   { return makeNode(num_lines, ID, yytext); }
+\"[^\"]*(\\.[^\"]*)*\"             { return makeNode(num_lines, STRINGCONST, yytext); }
+\n                                 { ++num_lines;}
+
+%%
